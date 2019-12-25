@@ -1,0 +1,90 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+/* grid adalah sama seperti tabel, terdiri dari kotak kotak. kekurangan : penuilisan css jadi agak lebih panjang, harus mengerti pengunaannya, bersabar masa baru KEN-alan udah mau KEN-thu  */
+/* grid ada 4 jenis 12 24 36 48 */
+/* yg kita pake 12 */
+.row::after {
+    display: table;
+    clear: both;
+}
+/* after adalah pseudo classes /element css. jadi hover juga termasuk.after adalah setelah.maksud setelah row.  */
+[class*='col-'] { /* semua class dengan col- pakai float left */
+    float: left;
+}
+/* setiap ketemu .99 dibuletin */
+.col-1{width: 8.33% ;}
+.col-2{width: 16.33% ;}
+.col-3{width: 25% ;}
+.col-4{width: 33.33% ;}
+.col-5{width: 41.66% ;}
+.col-6{width: 50% ;} 
+.col-7{width: 58.33% ;}
+.col-8{width: 66.66% ;}
+.col-9{width: 75% ;}
+.col-10{width: 83.33% ;}
+.col-11{width:  91.33% ;}
+.col-12{width: 100% ;}
+
+.container {
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* header-left - start */
+
+
+.bg-header-left { /* parent */
+    width: 100%;
+    height: 685px;
+    background-image: url("../img/bg-1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0 50px 50px 0;
+    filter: brightness(50%);
+    position: relative;
+}
+
+.content-header-left { /* child */
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.header-title {
+    color: #ececec;
+    padding-top: 20px;
+}
+
+h1.txt_header1 {
+    padding-top: 240px;
+    color: #fff;
+}
+p.txt_header2 {
+    color: #fff;
+}
+
+button.btn-head {
+    background-color: darkgreen;
+    color: #fff;
+    border-radius: 6px;
+    border: none;
+    height: 30px;
+    width: 200px;
+    margin-top: 25px;
+    font-weight: bold;
+}
+
+button.btn-head:hover {
+    cursor: pointer;
+    background-color: green;
+    border: greenyellow;
+}
+
+/* header-left - end */
