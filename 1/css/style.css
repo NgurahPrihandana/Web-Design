@@ -87,4 +87,34 @@ button.btn-head:hover {
     border: greenyellow;
 }
 
+.carousel {
+    margin-top: 180px;
+    display: inline-block;
+}
+
+.rect {
+    display: inline-block;
+    width: 40px;
+    height: 5px;
+    padding: 0;
+    background-color: #ececec;
+    opacity: 40%;
+}
+
+.rect-active {
+    opacity: 100%;
+}
+
+button.btn-slide {
+    font-size: 20px;
+    border: none;
+    background-color: transparent;
+    color: white;
+}
+
+.little-box {
+    width: 10px;
+    height: 2px;
+    background-color: #fff;
+}
 /* header-left - end */
