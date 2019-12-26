@@ -31,9 +31,11 @@
                         <br>
 
                         <div class="carousel">
-                            <button class="btn-slide">01 &#10094;</button>
+                            <a class="txt-slider">01 </a>
+                            <button class="btn-slide" id="btnSlideLeft">&#10094;</button>
                             <div class="rect rect-active"></div><div class="rect"></div><div class="rect"></div>
-                            <button class="btn-slide">&#10095; 03</button>
+                            <button class="btn-slide" id="btnSlideRight">&#10095;</button>
+                            <a class="txt-slider">  03</a>
                         </div>
                     </div>
                 </div>
@@ -44,5 +46,55 @@
         </div>
     </div>
 </body>
+
+<script>
+// ambil elemen button
+const btnSlideLeft = document.getElementById("btnSlideLeft")
+const btnSlideRight = document.getElementById("btnSlideRight")
+
+// ambil elemen kotak
+let listShape = document.querySelectorAll(".rect")
+let currentShape = 0
+
+btnSlideRight.addEventListener('click', () => {
+        switch (currentShape) {
+            case 0:
+                listShape[currentShape].classList.toggle('rect-active') // ilanging   
+                listShape[currentShape+1].classList.toggle('rect-active') // nambahin
+                currentShape++
+                break
+            case 1:
+                listShape[currentShape].classList.toggle('rect-active')  
+                listShape[currentShape+1].classList.toggle('rect-active')
+                currentShape++
+                break
+            case 2:
+                listShape[currentShape].classList.toggle('rect-active')
+                currentShape = 0
+                listShape[currentShape].classList.toggle('rect-active')
+                break
+        }
+})
+
+btnSlideLeft.addEventListener('click', () => {
+        switch (currentShape) {
+            case 0:
+                listShape[currentShape].classList.toggle('rect-active')
+                currentShape = 2 
+                listShape[currentShape].classList.toggle('rect-active')
+                break
+            case 1:
+                listShape[currentShape].classList.toggle('rect-active') 
+                listShape[currentShape-1].classList.toggle('rect-active')
+                currentShape--
+                break
+            case 2:
+                listShape[currentShape].classList.toggle('rect-active')
+                listShape[currentShape-1].classList.toggle('rect-active')
+                currentShape--
+                break
+        }
+})
+</script>
 
 </html>

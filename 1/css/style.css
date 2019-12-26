@@ -99,6 +99,7 @@ button.btn-head:hover {
     padding: 0;
     background-color: #ececec;
     opacity: 40%;
+    transition: 0.6s;
 }
 
 .rect-active {
@@ -117,4 +118,8 @@ button.btn-slide {
     height: 2px;
     background-color: #fff;
 }
-/* header-left - end */
+.txt-slider {
+    color: #fff;
+    font-size: 1.5em;
+}
+/* header-left - end */ 
