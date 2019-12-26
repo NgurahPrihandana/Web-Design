@@ -29,23 +29,24 @@
 
 .container {
     padding-right: 30px;
-    padding-left: 30px;
+    padding-left: 60px;
     margin-right: auto;
     margin-left: auto;
 }
 
 /* header-left - start */
 
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 .bg-header-left { /* parent */
     width: 100%;
-    height: 671px;
+    height: 695px;
     background-image: url("../img/bg-1.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 0 50px 50px 0;
-    filter: brightness(50%);
+    filter: brightness(65%);
     position: relative;
 }
 
@@ -58,21 +59,41 @@
 }
 
 .header-title {
-    color: #ececec;
+    white-space: nowrap;
+    text-align: left;
+    font-family: 'Segoe Script';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    color: rgba(255,255,255,1);
     padding-top: 20px;
 }
 
 h1.txt_header1 {
-    padding-top: 240px;
-    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 232px;
+    text-align: left;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: 41px;
+    color: rgba(255,255,255,1);
+    letter-spacing: 0.28px;
 }
 p.txt_header2 {
-    color: #fff;
+    white-space: nowrap;
+    text-align: left;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(255,255,255,1);
+    letter-spacing: 0.1px;
 }
 
 button.btn-head {
-    background-color: darkgreen;
+    background-color: #135336;
     color: #fff;
+    font-family: 'Roboto';
     border-radius: 6px;
     border: none;
     height: 30px;
@@ -88,7 +109,7 @@ button.btn-head:hover {
 }
 
 .carousel {
-    margin-top: 160px;
+    margin-top: 130px;
     display: inline-block;
 }
 
@@ -107,7 +128,7 @@ button.btn-head:hover {
 }
 
 button.btn-slide {
-    font-size: 10px;
+    font-size: 20px;
     border: none;
     background-color: transparent;
     color: white;
@@ -120,6 +141,6 @@ button.btn-slide {
 }
 .txt-slider {
     color: #fff;
-    font-size: 15px;
+    font-size: 20px;
 }
 /* header-left - end */ 
