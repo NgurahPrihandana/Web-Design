@@ -56,19 +56,39 @@ const btnSlideRight = document.getElementById("btnSlideRight")
 let listShape = document.querySelectorAll(".rect")
 let currentShape = 0
 
+function changeOpacityOfButton(current) {
+    if (current == 0) {
+        btnSlideLeft.style.opacity = "40%"
+        btnSlideRight.style.opacity = "100%"
+    } else if (current == 1) {
+        btnSlideLeft.style.opacity = "100%"
+        btnSlideRight.style.opacity = "100%"
+    } else if ( current == 3) {
+        btnSlideLeft.style.opacity = "100%"
+        btnSlideRight.style.opacity = "40%"
+    } else {
+        btnSlideRight.style.opacity = "40%"
+    }
+}
+
+changeOpacityOfButton(0)
+
 btnSlideRight.addEventListener('click', () => {
         switch (currentShape) {
             case 0:
+                changeOpacityOfButton(1)
                 listShape[currentShape].classList.toggle('rect-active') // ilanging   
                 listShape[currentShape+1].classList.toggle('rect-active') // nambahin
                 currentShape++
                 break
             case 1:
+                changeOpacityOfButton(2)
                 listShape[currentShape].classList.toggle('rect-active')  
                 listShape[currentShape+1].classList.toggle('rect-active')
                 currentShape++
                 break
             case 2:
+                changeOpacityOfButton(0)
                 listShape[currentShape].classList.toggle('rect-active')
                 currentShape = 0
                 listShape[currentShape].classList.toggle('rect-active')
@@ -79,16 +99,19 @@ btnSlideRight.addEventListener('click', () => {
 btnSlideLeft.addEventListener('click', () => {
         switch (currentShape) {
             case 0:
+                changeOpacityOfButton(3)
                 listShape[currentShape].classList.toggle('rect-active')
                 currentShape = 2 
                 listShape[currentShape].classList.toggle('rect-active')
                 break
             case 1:
+                changeOpacityOfButton(0)
                 listShape[currentShape].classList.toggle('rect-active') 
                 listShape[currentShape-1].classList.toggle('rect-active')
                 currentShape--
                 break
             case 2:
+                changeOpacityOfButton(1)
                 listShape[currentShape].classList.toggle('rect-active')
                 listShape[currentShape-1].classList.toggle('rect-active')
                 currentShape--
