@@ -54,6 +54,7 @@
     border-radius: 0 50px 50px 0;
     filter: brightness(65%);
     position: relative;
+    box-shadow: inset 0px 0px 80px 30px rgba(0,0,0,0.9);
 }
 
 .content-header-left { /* child */
