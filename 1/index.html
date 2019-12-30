@@ -55,6 +55,7 @@
 
 <script>
 // ambil elemen button
+const bgHeaderLeft = document.querySelectorAll(".bg-header-left")[0]
 const btnSlideLeft = document.getElementById("btnSlideLeft")
 const btnSlideRight = document.getElementById("btnSlideRight")
 
@@ -62,22 +63,44 @@ const btnSlideRight = document.getElementById("btnSlideRight")
 let listShape = document.querySelectorAll(".rect")
 let currentShape = 0
 
+
+function animationOnChangeBackground() {
+    // animasi
+        bgHeaderLeft.classList.toggle ('fadeable');
+            window.setTimeout( function() {
+            bgHeaderLeft.classList.toggle('fade-in');
+        }, 50);
+}
+
 function changeOpacityOfButton(current) {
     if (current == 0) {
+        animationOnChangeBackground()
+        bgHeaderLeft.style.backgroundImage = 'url("img/bg-1.jpg")'
         btnSlideLeft.style.opacity = "40%"
         btnSlideRight.style.opacity = "100%"
     } else if (current == 1) {
+        animationOnChangeBackground()
+        bgHeaderLeft.style.backgroundImage = 'url("img/scenic-view-of-mountain.jpg")'
         btnSlideLeft.style.opacity = "100%"
         btnSlideRight.style.opacity = "100%"
     } else if ( current == 3) {
+        animationOnChangeBackground()
+        bgHeaderLeft.style.backgroundImage = 'url("img/daylight-forest-glossy-lake.jpg")'
         btnSlideLeft.style.opacity = "100%"
         btnSlideRight.style.opacity = "40%"
+    } else if ( current == 4) {
+        bgHeaderLeft.style.backgroundImage = 'url("img/bg-1.jpg")'
+        btnSlideLeft.style.opacity = "40%"
+        btnSlideRight.style.opacity = "100%"
     } else {
+        animationOnChangeBackground()
+        bgHeaderLeft.style.backgroundImage = 'url("img/daylight-forest-glossy-lake.jpg")'
         btnSlideRight.style.opacity = "40%"
     }
 }
 
-changeOpacityOfButton(0)
+
+changeOpacityOfButton(4)
 
 btnSlideRight.addEventListener('click', () => {
         switch (currentShape) {

@@ -169,3 +169,15 @@ button.btn-slide {
     bottom: 108px;
 }
 /* header-left - end */ 
+
+.fadeable {
+    opacity: 85%;
+}
+.fade-in {
+    opacity: 1;
+    transition:             opacity 2s;
+        -moz-transition:    opacity 2s;
+        -ms-transition:     opacity 2s;
+        -o-transition:      opacity 2s;
+        -webkit-transition: opacity 2s;
+}
