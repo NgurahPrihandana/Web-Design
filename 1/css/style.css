@@ -37,6 +37,12 @@
 /* header-left - start */
 
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@font-face {
+    font-family: "Segoe Script";
+    src: url("../font/segoesc.ttf") format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
 
 .bg-header-left { /* parent */
     width: 100%;
